@@ -1,119 +1,269 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
+
     <style>
+
       body {
+
         display: flex;
+
         justify-content: center;
+
+        background-color: #f8fafc; /* Crisp, clean off-white canvas */
+
       }
+
+
 
       nav {
+
         justify-content: center;
+
         display: inline-flex;
-        border: 2px solid rgb(131, 93, 33);
-        border-radius: 20px;
+
+        border: 1px solid #cbd5e1; /* Ultra-thin professional slate border */
+
+        border-radius: 10px;
+
         gap: 20px;
+
         margin-top: 29px;
+
         padding: 20px;
-        width: 100%;
-        background-color: rgb(173, 110, 33);
+
+        background-color: #ffffff; /* Pure white crisp background */
+
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); /* Subtle premium shadow */
+
       }
+
+
 
       nav a {
+
         text-decoration: none;
-        color: rgb(0, 0, 0);
-        background-color: rgb(173, 110, 33);
-        border: 1px solid rgb(68, 33, 0);
-        border-radius: 10px;
+
+        color: #475569; /* Slate Gray for high-readability professional text */
+
+        background-color: transparent; 
+
         padding: 10px;
+
         transition: 1s;
+
+        position: relative;
+
+        display: inline-flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
       }
+
+
 
       .icon {
+
         width: 22px;
+
         height: 22px;
+
         object-fit: contain;
-        margin-right: 6px;
+
         vertical-align: middle;
+
+        transition: transform 0.3s ease; 
+
       }
+
+      
+
+      nav a .text {
+
+        position: absolute;
+
+        bottom: -15px;       
+
+        font-size: 12px;
+
+        font-weight: 500;
+
+        opacity: 0;          
+
+        transform: translateY(-5px); 
+
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+        pointer-events: none;
+
+      }
+
+
+
+      nav a:hover .text {
+
+        opacity: 1;          
+
+        transform: translateY(5px); 
+
+        color: #0f172a; /* Deep corporate dark charcoal for the active text */
+
+      }
+
+      
 
       nav a:hover {
+
         transform: translateY(-10px);
-        background-color: rgb(139, 68, 9);
-        color: rgb(255, 255, 255);
+
+        background-color: #f1f5f9; /* Smooth executive gray background hint on hover */
+
+        color: #0f172a; /* Deep dark charcoal for the active link element */
+
         box-shadow: 10px;
+
       }
-    @media (max-width: 900px) {
-    nav {
-        gap: 15px;
-        padding: 12px 20px;
-    }
 
-    .nav-item img {
-        width: 35px;
-        height: 35px;
-    }
+      
 
-    .nav-item span {
-        font-size: 14px;
-    }
-}
+      @media (max-width: 900px) {
 
-@media (max-width: 600px) {
-    nav {
-        width: 95%;
-        gap: 10px;
-        padding: 10px;
-        overflow-x: auto;
-        justify-content: flex-start;
-    }
+        nav {
 
-    .nav-item {
-        flex-shrink: 0;
-    }
+            gap: 15px;
 
-    .nav-item img {
-        width: 25px;
-        height: 25px;
-    }
+            padding: 12px 20px;
 
-    .nav-item span {
-        font-size: 11px;
-    }
-}
+        }
+
+
+
+        .nav-item img {
+
+            width: 35px;
+
+            height: 35px;
+
+        }
+
+
+
+        .nav-item span {
+
+            font-size: 14px;
+
+        }
+
+      }
+
+
+
+      @media (max-width: 600px) {
+
+        nav {
+
+            width: 95%;
+
+            gap: 10px;
+
+            padding: 10px;
+
+            overflow-x: auto;
+
+            justify-content: flex-start;
+
+        }
+
+
+
+        .nav-item {
+
+            flex-shrink: 0;
+
+        }
+
+
+
+        .nav-item img {
+
+            width: 25px;
+
+            height: 25px;
+
+        }
+
+
+
+        .nav-item span {
+
+            font-size: 11px;
+
+        }
+
+      }
+
     </style>
+
 </head>
+
 <body>
+
     <nav class="a">
+
         <a href="home.html" onclick="alert('Home clicked')">
-            <img src="icon 1.png" alt="Home icon"  class="icon">
+
+            <img src="icon 1.png" alt="Home icon" class="icon">
+
             <span class="text">Home</span>
 
         </a>
-        <a href="profile.html"onclick="alert('Profile clicked')">
+
+        <a href="profile.html" onclick="alert('Profile clicked')">
+
             <img src="icon2.png" alt="Profile icon" class="icon">
+
             <span class="text">Profile</span>
 
         </a>
+
         <a href="messages.html" onclick="alert('Messages clicked')">
+
             <img src="icon3.jpg" alt="Messages icon" class="icon">
+
             <span class="text">Messages</span>
 
         </a>
+
         <a href="photos.html" onclick="alert('Photos clicked')">
+
             <img src="icon4.jpg" alt="Photos icon" class="icon">
+
             <span class="text">Photos</span>
-  
+
+            <p>ddd</p>
+
         </a>
+
         <a href="settings.html" onclick="alert('settings clicked')">
+
             <img src="icon5.jpg" alt="settings icon" class="icon">
+
             <span class="text">Settings</span>
-            <p>hhjhh</p>
-            
+
         </a>
+
     </nav>
+
 </body>
+
 </html>
